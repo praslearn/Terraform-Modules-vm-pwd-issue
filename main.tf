@@ -24,7 +24,11 @@ module "ResourceGroup" {
   base_name = "TerraformExample01"
   location = "West US"
 }
-
+module "VirtualNetwork" {
+  source = "./VirtualNetwork"
+  base_name = "TerraformExample01"
+  location = "West US"
+}
 module "StorageAccount" {
   source = "./StorageAccount"
   base_name = "TerraformExample01"
