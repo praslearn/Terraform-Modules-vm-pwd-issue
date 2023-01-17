@@ -1,11 +1,10 @@
 terraform {
-  required_providers {
+required_providers {
     azurerm = {
-      source = "hashicorp/azurerm"
-      version = "2.88.1"
+      source  = "hashicorp/azurerm"
+      version = "3.15.00"
     }
   }
-}
   backend "azurerm" {
     resource_group_name = var.bkstrgrg
     storage_account_name = var.bkstrg
