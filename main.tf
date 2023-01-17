@@ -17,11 +17,7 @@ terraform {
 provider "azurerm" {
   features {}
 }
-provider "azurerm" {
-  features {
-    
-  }
-}
+
 
 module "ResourceGroup" {
   source = "./ResourceGroup"
