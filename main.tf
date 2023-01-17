@@ -12,3 +12,7 @@ terraform {
     key = var.bkstrgkey
   }
 }
+
+provider "azurerm" {
+  features {}
+}
