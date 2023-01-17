@@ -7,5 +7,5 @@ resource "azurerm_virtual_network" "example" {
     azurerm_resource_group.name
  ]
 }
-}
+
 
