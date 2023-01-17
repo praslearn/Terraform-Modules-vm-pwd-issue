@@ -24,7 +24,7 @@ provider "azurerm" {
 }
 
 module "ResourceGroup" {
-  source = "./ResourceGroup/main.tf"
+  source = "./ResourceGroup"
   base_name = "TerraformExample01"
   location = "West US"
 }
