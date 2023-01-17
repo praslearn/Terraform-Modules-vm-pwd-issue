@@ -13,11 +13,9 @@ required_providers {
   }
 }
 
-
 provider "azurerm" {
   features {}
 }
-
 
 module "ResourceGroup" {
   source = "./ResourceGroup"
@@ -26,6 +24,12 @@ module "ResourceGroup" {
 }
 module "VirtualNetwork" {
   source = "./VirtualNetwork"
+  base_name = "TerraformExample01"
+  resource_group_name = module.ResourceGroup.rg_name_out
+  location = "West US"
+}
+module "VirtualMachine" {
+  source = "./VirtualMachine"
   base_name = "TerraformExample01"
   resource_group_name = module.ResourceGroup.rg_name_out
   location = "West US"
