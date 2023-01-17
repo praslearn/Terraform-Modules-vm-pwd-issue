@@ -4,7 +4,7 @@ resource "azurerm_virtual_network" "example" {
   resource_group_name  = var.resource_group_name
   location = var.location
   depends_on = [
-    azurerm_resource_group
+    azurerm_resource_group.example
  ]
 }
 
