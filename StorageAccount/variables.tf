@@ -15,4 +15,3 @@ variable "location" {
     description = "The location for the deployment"
     default     = "East US"
 }
-Footer
