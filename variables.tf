@@ -32,8 +32,9 @@ variable "azurerm_network_interface" {
     description = "The location for the deployment"
     default     = "East US"
 }
-//variable "azurerm_subnet" {
-//   type = string
-//  description = "The location for the deployment"
-// default     = "East US"
-//}
+
+variable "azurerm_subnet" {
+   type = string
+  description = "The location for the deployment"
+ default     = "East US"
+}
