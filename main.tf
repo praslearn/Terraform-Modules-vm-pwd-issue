@@ -42,7 +42,7 @@ source = "./Subnet"
 base_name = "TerraformExample01"
 resource_group_name = module.ResourceGroup.rg_name_out
 location = "West US"
-virtual_network_name = module.VirtualNetwork.example.id
+virtual_network_name = module.VirtualNetwork.id
 }
 
 module "NetworkInterface" {
