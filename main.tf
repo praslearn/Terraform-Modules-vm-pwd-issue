@@ -37,13 +37,13 @@ module "VirtualNetwork" {
   location = "West US"
 }
 
-module "Subnet" {
-  source = "./Subnet"
-  base_name = "TerraformExample01"
-  resource_group_name = module.ResourceGroup.rg_name_out
-  location = "West US"
-  depends_on = [module.VirtualNetwork]
-}
+//module "Subnet" {
+//source = "./Subnet"
+//base_name = "TerraformExample01"
+//resource_group_name = module.ResourceGroup.rg_name_out
+//location = "West US"
+//  depends_on = [module.VirtualNetwork]
+//}
 
 module "VirtualMachine-Win" {
   source = "./VirtualMachine-Win"
