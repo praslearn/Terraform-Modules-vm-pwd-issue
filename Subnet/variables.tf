@@ -15,5 +15,7 @@ variable "location" {
     description = "The location for the deployment"
     default     = "East US"
 }
-variable "virtual_network_name" { }
+variable "virtual_network_name" { 
+    type = number
+}
 
