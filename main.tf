@@ -33,6 +33,9 @@ module "Subnet" {
   base_name = "TerraformExample01"
   resource_group_name = module.ResourceGroup.rg_name_out
   location = "West US"
+  depends_on = [
+      azurerm_virtual_network.example
+  ] 
 }
 module "VirtualMachine" {
   source = "./VirtualMachine"
