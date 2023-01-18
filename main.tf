@@ -58,4 +58,6 @@ module "VirtualMachine-Win" {
   base_name = "TerraformExample01"
   resource_group_name = module.ResourceGroup.rg_name_out
   location = "West US"
+  depends_on = [module.NetworkInterface]
+
 }
