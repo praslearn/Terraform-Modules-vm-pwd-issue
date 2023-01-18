@@ -16,6 +16,5 @@ variable "location" {
     default     = "East US"
 }
 variable "virtual_network_name" { 
-    type = number
 }
 
