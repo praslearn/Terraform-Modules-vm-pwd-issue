@@ -45,4 +45,3 @@ module "subnet" {
 
   depends_on = [module.VirtualNetwork]
 }
-}
