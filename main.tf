@@ -30,6 +30,14 @@ module "StorageAccount" {
   location = "West US"
 }
 
+module "NetworkSecurityGroup" {
+  source = "./NetworkSecurityGroup"
+  base_name = "TerraformExample01"
+  resource_group_name = module.ResourceGroup.rg_name_out
+  location = "West US"
+}
+
+
 module "VirtualNetwork" {
   source = "./VirtualNetwork"
   base_name = "TerraformExample01"
