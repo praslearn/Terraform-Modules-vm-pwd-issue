@@ -59,6 +59,7 @@ stages:
               backendAzureRmKey: '$(bkstrgkey)'
 
           - task: TerraformTaskV3@3
+            displayName: force unlock
             inputs:
               provider: 'azurerm'
               command: 'custom'
