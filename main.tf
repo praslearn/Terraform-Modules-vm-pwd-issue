@@ -23,12 +23,6 @@ module "ResourceGroup" {
   location = "West US"
 }
 
-module "StorageAccount" {
-  source = "./StorageAccount"
-  base_name = "TerraformExample01"
-  resource_group_name = module.ResourceGroup.rg_name_out
-  location = "West US"
-}
 
 module "Subnet" {
 source = "./Subnet"
@@ -39,6 +33,13 @@ virtual_network_name = module.VirtualNetwork.vnet_name_out
 }
 
 /*
+
+module "StorageAccount" {
+  source = "./StorageAccount"
+  base_name = "TerraformExample01"
+  resource_group_name = module.ResourceGroup.rg_name_out
+  location = "West US"
+}
 module "VirtualNetwork" {
   source = "./VirtualNetwork"
   base_name = "TerraformExample01"
