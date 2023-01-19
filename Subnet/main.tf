@@ -4,6 +4,3 @@ data "azurerm_subnet" "example" {
   resource_group_name  = var.resource_group_name
 }
 
-output "subnet_id" {
-  value = data.azurerm_subnet.example.id
-}
