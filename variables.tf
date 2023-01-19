@@ -20,6 +20,11 @@ variable "azurerm_network_security_group" {
   description = "The location for the deployment"
  default     = "East US"
 }
+variable "azurerm_virtual_network" {
+    type = string
+    description = "The location for the deployment"
+    default     = "East US"
+}
 
 variable "azurerm_subnet" {
    type = string
@@ -27,11 +32,6 @@ variable "azurerm_subnet" {
  default     = "East US"
 }
 /*
-variable "azurerm_virtual_network" {
-    type = string
-    description = "The location for the deployment"
-    default     = "East US"
-}
 
 variable "azurerm_windows_virtual_machine" {
     type = string
