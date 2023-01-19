@@ -57,6 +57,15 @@ stages:
               backendAzureRmStorageAccountName: '$(bkstrg)'
               backendAzureRmContainerName: '$(bkcontainer)'
               backendAzureRmKey: '$(bkstrgkey)'
+
+          - task: TerraformTaskV3@3
+            inputs:
+              provider: 'azurerm'
+              command: 'custom'
+              customCommand: 'force-unlock'
+              commandOptions: '-force'
+              outputTo: 'console'
+              environmentServiceNameAzureRM: 'ARM-SC'
           - task: TerraformTaskV3@3
             displayName: plan
             inputs:
