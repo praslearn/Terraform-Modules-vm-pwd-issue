@@ -25,7 +25,11 @@ variable "azurerm_virtual_network" {
     description = "The location for the deployment"
     default     = "East US"
 }
-
+variable "azurerm_mysql_server" {
+    type = string
+    description = "The location for the deployment"
+    default     = "East US"
+}
 /*
 variable "azurerm_windows_virtual_machine" {
     type = string
