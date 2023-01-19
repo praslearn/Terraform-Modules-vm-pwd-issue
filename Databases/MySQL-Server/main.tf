@@ -1,5 +1,5 @@
 resource "azurerm_mysql_server" "example" {
-  name                = "example-mysqlserver"
+  name                = "example24-mysqlserver"
   location            = var.location
   resource_group_name = var.resource_group_name
 
