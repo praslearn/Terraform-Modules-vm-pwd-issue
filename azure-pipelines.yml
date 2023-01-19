@@ -63,7 +63,7 @@ stages:
             inputs:
               provider: 'azurerm'
               command: 'custom'
-              customCommand: 'force-unlock $(LOCK_ID)'
+              customCommand: 'force-unlock 2d796023-6994-21d6-2f70-2c6fdbb5ca37'
               commandOptions: '-force'
               outputTo: 'console'
               environmentServiceNameAzureRM: 'ARM-SC'
