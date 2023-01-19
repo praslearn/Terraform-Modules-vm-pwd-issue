@@ -27,7 +27,7 @@ variable "azurerm_virtual_network" {
 }
 
 
-variable "azurerm_mssql_database" {
+variable "azurerm_sql_database" {
     type = string
     description = "The location for the deployment"
     default     = "East US"
