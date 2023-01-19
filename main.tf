@@ -40,8 +40,8 @@ module "VirtualNetwork" {
 
 
 
-module "MySQL-DB"{
-  source = "./Databases/MySQL-DB"
+module "MySQL-Server"{
+  source = "./Databases/MySQL-Server"
   base_name = "TerraformExample01"
   resource_group_name = module.ResourceGroup.rg_name_out
   location = "West US"
