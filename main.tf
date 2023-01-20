@@ -48,6 +48,7 @@ module "Windows"{
   source = "./Compute/VirtualMachine/Windows"
   base_name = "TerraformExample01"
   resource_group_name = module.ResourceGroup.rg_name_out
+  network_interface_ids = module.NetworkInterface.netinterface_name_out
   location = "West US"
 }
 module "NetworkInterface"{
