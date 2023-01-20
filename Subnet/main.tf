@@ -20,6 +20,6 @@ resource "azurerm_subnet" "example" {
     }
   }
 
-   depends_on = [resource.azurerm_virtual_network]
+   depends_on = [resource.azurerm_virtual_network.example]
 
 }
