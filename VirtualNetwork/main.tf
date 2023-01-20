@@ -1,6 +1,6 @@
 data "azurerm_network_security_group" "example" {
   name                = "example"
-  resource_group_name = azurerm_resource_group.example.name
+  resource_group_name = var.resource_group_name
 }
 
 resource "azurerm_virtual_network" "example" {
