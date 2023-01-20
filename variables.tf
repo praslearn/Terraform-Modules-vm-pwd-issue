@@ -23,21 +23,19 @@ variable "azurerm_virtual_network" {
     description = "The location for the deployment"
     default     = "East US"
 }
-variable "azurerm_subnet" {
-    type = string
-    description = "The location for the deployment"
-    default     = "East US"
-}
-variable "azurerm_mysql_server" {
-    type = string
-    description = "The location for the deployment"
-    default     = "East US"
-}
+
 variable "azurerm_application_insights" {
     type = string
     description = "The location for the deployment"
     default     = "East US"
 }
+variable "azurerm_storage_account" {
+    type = string
+    description = "The location for the deployment"
+    default     = "East US"
+}
+
+/*
 variable "azurerm_windows_virtual_machine" {
     type = string
     description = "The location for the deployment"
@@ -48,3 +46,14 @@ variable "azurerm_network_interface" {
     description = "The location for the deployment"
     default     = "East US"
 }
+variable "azurerm_subnet" {
+    type = string
+    description = "The location for the deployment"
+    default     = "East US"
+}
+variable "azurerm_mysql_server" {
+    type = string
+    description = "The location for the deployment"
+    default     = "East US"
+}
+*/
