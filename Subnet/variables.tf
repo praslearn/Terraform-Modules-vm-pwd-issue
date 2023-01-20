@@ -19,6 +19,6 @@ variable "location" {
 variable "virtual_network_name" {
     type = string
     description = "The location for the deployment"
-    default     = "East US"
+    default     = "example-network"
 }
   
