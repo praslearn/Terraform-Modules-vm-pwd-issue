@@ -9,10 +9,7 @@ provider "azurerm" {
 
 data "azurerm_client_config" "current" {}
 
-resource "azurerm_resource_group" "example" {
-  location                    = var.location
-  resource_group_name         = var.resource_group_name
-}
+
 
 resource "azurerm_key_vault" "example" {
   name                        = "examplekeyvault24"
