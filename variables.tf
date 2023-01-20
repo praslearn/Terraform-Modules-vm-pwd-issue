@@ -13,7 +13,17 @@ variable "location" {
     description = "The location for the deployment"
     default     = "East US"
 }
+variable "azurerm_network_security_group" {
+    type = string
+    description = "The location for the deployment"
+    default     = "East US"
+}
 variable "azurerm_virtual_network" {
+    type = string
+    description = "The location for the deployment"
+    default     = "East US"
+}
+variable "azurerm_subnet" {
     type = string
     description = "The location for the deployment"
     default     = "East US"
