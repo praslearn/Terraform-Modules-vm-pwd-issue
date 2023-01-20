@@ -13,7 +13,7 @@ variable "resource_group_name" {
 variable "location" {
     type = string
     description = "The location for the deployment"
-    default     = "East US"
+    default     = "West US"
 }
 
 variable "virtual_network_name" {
