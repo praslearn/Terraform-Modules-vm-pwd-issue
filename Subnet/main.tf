@@ -1,4 +1,4 @@
-resource "azurerm_virtual_network" "example" {
+data "azurerm_virtual_network" "example" {
   name                = "example-network"
   address_space       = ["10.0.0.0/16"]
   location            = var.location
@@ -20,6 +20,6 @@ resource "azurerm_subnet" "example" {
     }
   }
 
-   depends_on = [resource.azurerm_virtual_network.example]
+   depends_on = [data.azurerm_virtual_network.example]
 
 }
