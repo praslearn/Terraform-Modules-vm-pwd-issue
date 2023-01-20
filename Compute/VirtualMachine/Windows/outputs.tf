@@ -1,4 +1,3 @@
-output "vm_win_name_out" {
-  value = resource.azurerm_windows_virtual_machine.example.name
+output "virtual_machine_id" {
+  value = data.azurerm_virtual_machine.example.id
 }
-
