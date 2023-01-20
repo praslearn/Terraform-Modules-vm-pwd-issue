@@ -10,3 +10,12 @@ resource "azurerm_virtual_network" "example" {
     address_prefix = "10.0.1.0/24"
   }
 }
+
+data "azurerm_network_interface" "example" {
+  name                = "example-nic"
+  resource_group_name = var.resource_group_name
+}
+
+output "network_interface_id" {
+  value = data.azurerm_network_interface.example.id
+}
