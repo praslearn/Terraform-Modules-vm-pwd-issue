@@ -33,3 +33,8 @@ variable "azurerm_windows_virtual_machine" {
     description = "The location for the deployment"
     default     = "East US"
 }
+variable "azurerm_network_interface" {
+    type = string
+    description = "The location for the deployment"
+    default     = "East US"
+}
