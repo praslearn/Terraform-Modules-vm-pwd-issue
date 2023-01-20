@@ -1,4 +1,4 @@
-data "azurerm_network_security_group" "example" {
+resource "azurerm_network_security_group" "example" {
   name                = "example"
   resource_group_name = var.resource_group_name
 }
