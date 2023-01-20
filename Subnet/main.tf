@@ -1,7 +1,3 @@
-data "azurerm_virtual_network" "example" {
-  name                = "example"
-  resource_group_name = var.resource_group_name
-}
 
 resource "azurerm_subnet" "example" {
   name                 = "example-subnet"
