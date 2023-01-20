@@ -19,4 +19,7 @@ resource "azurerm_subnet" "example" {
       actions = ["Microsoft.Network/virtualNetworks/subnets/join/action", "Microsoft.Network/virtualNetworks/subnets/prepareNetworkPolicies/action"]
     }
   }
+
+   depends_on = [resource.azurerm_virtual_network.example.id]
+
 }
