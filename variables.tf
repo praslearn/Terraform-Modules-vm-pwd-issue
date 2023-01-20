@@ -23,4 +23,8 @@ variable "azurerm_mysql_server" {
     description = "The location for the deployment"
     default     = "East US"
 }
-
+variable "azurerm_application_insights" {
+    type = string
+    description = "The location for the deployment"
+    default     = "East US"
+}
