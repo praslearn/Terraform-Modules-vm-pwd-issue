@@ -28,3 +28,8 @@ variable "azurerm_application_insights" {
     description = "The location for the deployment"
     default     = "East US"
 }
+variable "azurerm_windows_virtual_machine" {
+    type = string
+    description = "The location for the deployment"
+    default     = "East US"
+}
