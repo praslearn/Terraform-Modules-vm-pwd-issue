@@ -1,5 +1,5 @@
 data "azurerm_virtual_network" "example" {
-  name                = "production"
+  name                = "example-network"
   resource_group_name = var.resource_group_name
 }
 
@@ -12,7 +12,7 @@ data "azurerm_subnet" "example" {
 }
 
 data "azurerm_network_interface" "example" {
-  name                = "acctest-nic"
+  name                = "example-nic"
   resource_group_name = var.resource_group_name
 }
 
