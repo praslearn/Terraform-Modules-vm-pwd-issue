@@ -9,9 +9,7 @@ data "azurerm_subnet" "example" {
   resource_group_name  = var.resource_group_name
 }
 
-
-
-resource "azurerm_network_interface" "example" {
+data "azurerm_network_interface" "example" {
   name                = "example-nic"
   location            = var.location
   resource_group_name = var.resource_group_name
