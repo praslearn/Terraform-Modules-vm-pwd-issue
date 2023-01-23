@@ -52,7 +52,12 @@ module "Subnet"{
   virtual_network_name = module.VirtualNetwork.vnet_name_out
   location = "West US"
 }
-
+module "Keyvault"{
+  source = "./Keyvault"
+  base_name = "TerraformExample01"
+  resource_group_name = module.ResourceGroup.rg_name_out
+  location = "West US"
+}
 /*
 module "Subnet"{
   source = "./Subnet"
