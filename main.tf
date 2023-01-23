@@ -43,7 +43,7 @@ module "NetworkInterface"{
   base_name = "TerraformExample01"
   resource_group_name = module.ResourceGroup.rg_name_out
   location = "West US"
-  depends_on = [module.VirtualNetwork, module.subnet]
+  depends_on = [module.VirtualNetwork, module.Subnet]
 }
 module "ApplicationInsights"{
   source = "./ApplicationInsights"
