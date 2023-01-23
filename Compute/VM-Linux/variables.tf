@@ -20,3 +20,8 @@ variable "virtual_network_name" {
     description = "The location for the deployment"
     default     = "East US"
 }
+variable "subnet_name" {
+    type = string
+    description = "The location for the deployment"
+    default     = "East US"
+}
