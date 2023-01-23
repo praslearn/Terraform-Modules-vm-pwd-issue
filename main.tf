@@ -38,7 +38,13 @@ module "VirtualNetwork" {
   resource_group_name = module.ResourceGroup.rg_name_out
   location = "West US"
 }
-
+module "NetworkInterface"{
+  source = "./NetworkInterface"
+  base_name = "TerraformExample01"
+  resource_group_name = module.ResourceGroup.rg_name_out
+  location = "West US"
+  depends_on = [module.VirtualNetwork, module.Subnet]
+}
 module "ApplicationInsights"{
   source = "./ApplicationInsights"
   base_name = "TerraformExample01"
@@ -52,27 +58,24 @@ module "Subnet"{
   virtual_network_name = module.VirtualNetwork.vnet_name_out
   location = "West US"
 }
+module "Keyvault"{
+  source = "./Keyvault"
+  base_name = "TerraformExample01"
+  resource_group_name = module.ResourceGroup.rg_name_out
+  location = "West US"
+}
+
+module "VM-Linux"{
+  source = "./Compute/VM-Linux"
+  base_name = "TerraformExample01"
+  resource_group_name = module.ResourceGroup.rg_name_out
+  virtual_network_name = module.VirtualNetwork.vnet_name_out
+  subnet_name   = module.Subnet.subnet_name_out
+  location = "West US"
+    depends_on = [module.VirtualNetwork, module.Subnet,module.NetworkInterface]
+}
 
 /*
-module "Subnet"{
-  source = "./Subnet"
-  base_name = "TerraformExample01"
-  resource_group_name = module.ResourceGroup.rg_name_out
-  location = "West US"
-}
-module "KeyVault"{
-  source = "./KeyVault"
-  base_name = "TerraformExample01"
-  resource_group_name = module.ResourceGroup.rg_name_out
-  location = "West US"
-}
-module "NetworkInterface"{
-  source = "./NetworkInterface"
-  base_name = "TerraformExample01"
-  resource_group_name = module.ResourceGroup.rg_name_out
-  location = "West US"
-}
-
 module "Windows"{
   source = "./Compute/VirtualMachine/Windows"
   base_name = "TerraformExample01"
