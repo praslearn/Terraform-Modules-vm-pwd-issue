@@ -72,6 +72,7 @@ module "VM-Linux"{
   virtual_network_name = module.VirtualNetwork.vnet_name_out
   subnet_name   = module.Subnet.subnet_name_out
   location = "West US"
+    depends_on = [module.VirtualNetwork, module.Subnet,module.NetworkInterface]
 }
 
 /*
