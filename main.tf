@@ -58,19 +58,15 @@ module "Keyvault"{
   resource_group_name = module.ResourceGroup.rg_name_out
   location = "West US"
 }
+
+module "VM-Linux"{
+  source = "./Compute/VM-Linux"
+  base_name = "TerraformExample01"
+  resource_group_name = module.ResourceGroup.rg_name_out
+  location = "West US"
+}
 /*
-module "Subnet"{
-  source = "./Subnet"
-  base_name = "TerraformExample01"
-  resource_group_name = module.ResourceGroup.rg_name_out
-  location = "West US"
-}
-module "KeyVault"{
-  source = "./KeyVault"
-  base_name = "TerraformExample01"
-  resource_group_name = module.ResourceGroup.rg_name_out
-  location = "West US"
-}
+
 module "NetworkInterface"{
   source = "./NetworkInterface"
   base_name = "TerraformExample01"
