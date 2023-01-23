@@ -38,14 +38,17 @@ module "VirtualNetwork" {
   resource_group_name = module.ResourceGroup.rg_name_out
   location = "West US"
 }
-module "Subnet"{
-  source = "./Subnet"
+
+module "ApplicationInsights"{
+  source = "./ApplicationInsights"
   base_name = "TerraformExample01"
   resource_group_name = module.ResourceGroup.rg_name_out
   location = "West US"
 }
-module "ApplicationInsights"{
-  source = "./ApplicationInsights"
+
+/*
+module "Subnet"{
+  source = "./Subnet"
   base_name = "TerraformExample01"
   resource_group_name = module.ResourceGroup.rg_name_out
   location = "West US"
@@ -56,8 +59,6 @@ module "KeyVault"{
   resource_group_name = module.ResourceGroup.rg_name_out
   location = "West US"
 }
-/*
-
 module "NetworkInterface"{
   source = "./NetworkInterface"
   base_name = "TerraformExample01"
