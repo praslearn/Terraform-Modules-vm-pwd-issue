@@ -39,17 +39,13 @@ variable "azurerm_subnet" {
     description = "The location for the deployment"
     default     = "East US"
 }
-/*
+
 variable "azurerm_key_vault" {
     type = string
     description = "The location for the deployment"
     default     = "East US"
 }
-variable "azurerm_subnet" {
-    type = string
-    description = "The location for the deployment"
-    default     = "East US"
-}
+/*
 variable "azurerm_windows_virtual_machine" {
     type = string
     description = "The location for the deployment"
