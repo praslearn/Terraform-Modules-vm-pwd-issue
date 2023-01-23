@@ -3,12 +3,13 @@ data "azurerm_virtual_network" "example" {
   resource_group_name = var.resource_group_name
 }
 
-resource "azurerm_subnet" "example" {
-  name                 = "internal"
-  resource_group_name = var.resource_group_name
-  virtual_network_name = var.virtual_network_name
-  address_prefixes     = ["10.0.2.0/24"]
+data "azurerm_subnet" "example" {
+  name                 = "backend"
+  virtual_network_name = "example-network"
+  resource_group_name  = var.resource_group_name
 }
+
+
 
 resource "azurerm_network_interface" "example" {
   name                = "example-nic"
