@@ -7,6 +7,7 @@ data "azurerm_subnet" "subnet_name" {
   name                 = "backend"
   virtual_network_name = "example-network"
   resource_group_name  = var.resource_group_name
+  depends_on = [data.azurerm_virtual_network.example]
 }
 
 
