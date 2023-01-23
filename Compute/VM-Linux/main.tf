@@ -21,7 +21,7 @@ resource "azurerm_linux_virtual_machine" "example" {
   admin_username      = "adminuser"
   admin_password      = "P@$$w0rd1234!"
   network_interface_ids = [
-    azurerm_network_interface.example.id,
+    data.azurerm_network_interface.example.id,
   ]
   os_disk {
     caching              = "ReadWrite"
