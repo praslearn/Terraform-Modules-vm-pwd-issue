@@ -1,21 +1,17 @@
-data "azurerm_virtual_network" "example" {
-  name                = var.virtual_network_name
+resource "azurerm_virtual_network" "example" {
+  name                = "example-network"
+  address_space       = ["10.0.0.0/16"]
+  location            = var.location
   resource_group_name = var.resource_group_name
 }
 
-output "virtual_network_id" {
-  value = data.azurerm_virtual_network.example.id
-}
-
-data "azurerm_subnet" "example" {
-  name                 = "example"
+resource "azurerm_subnet" "example" {
+  name                 = "internal"
+  resource_group_name = var.resource_group_name
   virtual_network_name = var.virtual_network_name
-  resource_group_name  = var.resource_group_name
+  address_prefixes     = ["10.0.2.0/24"]
 }
 
-output "subnet_id" {
-  value = data.azurerm_subnet.example.id
-}
 resource "azurerm_network_interface" "example" {
   name                = "example-nic"
   location            = var.location
