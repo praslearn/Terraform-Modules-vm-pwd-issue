@@ -50,7 +50,11 @@ variable "azurerm_key_vault" {
     description = "The location for the deployment"
     default     = "East US"
 }
-
+variable "azurerm_public_ip" {
+    type = string
+    description = "The location for the deployment"
+    default     = "East US"
+}
 variable "azurerm_linux_virtual_machine" {
     type = string
     description = "The location for the deployment"
