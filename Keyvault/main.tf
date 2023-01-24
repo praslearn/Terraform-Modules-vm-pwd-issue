@@ -20,7 +20,7 @@ resource "azurerm_key_vault" "example" {
     ]
 
     secret_permissions = [
- "Backup", "Delete" , "List", "Purge", "Recover", "Restore" , "set",
+ "Backup", "Delete" , "List", "Purge", "Recover", "Restore" , "Set",
      ]
 
     storage_permissions = [
