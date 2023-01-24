@@ -67,9 +67,6 @@ module "Keyvault"{
 }
 module "Keyvault-secret"{
   source = "./Keyvault-secret"
-  base_name = "TerraformExample01"
-  resource_group_name = module.ResourceGroup.rg_name_out
-  location = "West US"
 }
 module "PublicIP"{
   source = "./PublicIP"
