@@ -16,15 +16,18 @@ resource "azurerm_key_vault" "example" {
     object_id = data.azurerm_client_config.current.object_id
 
     key_permissions = [
-      "Get",
+      "Get","Backup", "Create", "Decrypt", "Delete", "Encrypt", "Import", "List", "Purge", "Recover", "Restore", "Sign", "UnwrapKey", "Update", "Verify", "WrapKey",
+ "Release", "Rotate", "GetRotationPolicy", "SetRotationPolicy"
     ]
 
     secret_permissions = [
-      "Get",
+       "Get","Backup", "Create", "Decrypt", "Delete", "Encrypt", "Import", "List", "Purge", "Recover", "Restore", "Sign", "UnwrapKey", "Update", "Verify", "WrapKey",
+ "Release", "Rotate", "GetRotationPolicy", "SetRotationPolicy"
     ]
 
     storage_permissions = [
-      "Get",
+       "Get","Backup", "Create", "Decrypt", "Delete", "Encrypt", "Import", "List", "Purge", "Recover", "Restore", "Sign", "UnwrapKey", "Update", "Verify", "WrapKey",
+ "Release", "Rotate", "GetRotationPolicy", "SetRotationPolicy"
     ]
   }
 }
