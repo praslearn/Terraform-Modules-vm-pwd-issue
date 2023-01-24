@@ -1,9 +1,8 @@
-resource "azurerm_network_security_group" "example" {
+
+data "azurerm_network_security_group" "example" {
   name                = "example"
   resource_group_name = var.resource_group_name
-  location            = var.location
 }
-
 resource "azurerm_virtual_network" "example" {
   name                = "example-network"
   location            = var.location
