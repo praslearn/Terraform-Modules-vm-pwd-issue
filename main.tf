@@ -36,6 +36,7 @@ module "VirtualNetwork" {
   source = "./VirtualNetwork"
   base_name = "TerraformExample01"
   resource_group_name = module.ResourceGroup.rg_name_out
+  depends_on = [module.NSG]
   location = "West US"
 }
 module "NetworkInterface"{
