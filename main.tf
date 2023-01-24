@@ -68,6 +68,8 @@ module "Keyvault"{
 }
 module "Keyvault-secret"{
   source = "./Keyvault-secret"
+  depends_on =[module.Keyvault]
+
 }
 module "PublicIP"{
   source = "./PublicIP"
