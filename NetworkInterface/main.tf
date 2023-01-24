@@ -8,7 +8,10 @@ data "azurerm_subnet" "example" {
   virtual_network_name = "example-network"
   resource_group_name  = var.resource_group_name
 }
-
+data "azurerm_public_ip" "example" {
+  name                = "acceptanceTestPublicIp1"
+  resource_group_name = var.resource_group_name
+}
 resource "azurerm_network_interface" "example" {
   name                = "example-nic"
   location            = var.location
