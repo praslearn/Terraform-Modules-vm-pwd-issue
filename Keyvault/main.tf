@@ -17,17 +17,14 @@ resource "azurerm_key_vault" "example" {
 
     key_permissions = [
       "Get","Backup", "Create", "Decrypt", "Delete", "Encrypt", "Import", "List", "Purge", "Recover", "Restore", "Sign", "UnwrapKey", "Update", "Verify", "WrapKey",
- "Release", "Rotate", "GetRotationPolicy", "SetRotationPolicy"
     ]
 
     secret_permissions = [
-       "Get","Backup", "Create", "Decrypt", "Delete", "Encrypt", "Import", "List", "Purge", "Recover", "Restore", "Sign", "UnwrapKey", "Update", "Verify", "WrapKey",
- "Release", "Rotate", "GetRotationPolicy", "SetRotationPolicy"
+             "Get","Backup", "Create", "Decrypt", "Delete", "Encrypt", "Import", "List", "Purge", "Recover", "Restore", "Sign", "UnwrapKey", "Update", "Verify", "WrapKey",
     ]
 
     storage_permissions = [
-       "Get","Backup", "Create", "Decrypt", "Delete", "Encrypt", "Import", "List", "Purge", "Recover", "Restore", "Sign", "UnwrapKey", "Update", "Verify", "WrapKey",
- "Release", "Rotate", "GetRotationPolicy", "SetRotationPolicy"
+            "Get","Backup", "Create", "Decrypt", "Delete", "Encrypt", "Import", "List", "Purge", "Recover", "Restore", "Sign", "UnwrapKey", "Update", "Verify", "WrapKey",
     ]
   }
 }
