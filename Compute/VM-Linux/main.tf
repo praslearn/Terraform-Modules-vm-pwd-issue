@@ -12,7 +12,10 @@ data "azurerm_network_interface" "example" {
   name                = "example-nic"
   resource_group_name = var.resource_group_name
 }
-
+data "azurerm_public_ip" "example" {
+  name                = azurerm_public_ip.example.name
+  resource_group_name = var.resource_group_name
+}
 resource "azurerm_linux_virtual_machine" "example" {
   name                = "example-machine"
   location                    = var.location
