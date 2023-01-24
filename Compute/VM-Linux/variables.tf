@@ -30,3 +30,9 @@ variable "network_interface_ids" {
     description = "The location for the deployment"
     default     = "East US"
 }
+variable "public_ip_name" {
+    type = string
+    description = "The location for the deployment"
+    default     = "East US"
+}
+
