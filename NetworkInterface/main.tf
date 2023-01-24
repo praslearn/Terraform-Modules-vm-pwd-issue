@@ -17,5 +17,6 @@ resource "azurerm_network_interface" "example" {
     name                          = "internal"
     subnet_id                     = data.azurerm_subnet.example.id
     private_ip_address_allocation = "Dynamic"
+    public_ip_address_id          = data.azurerm_public_ip.example.id
   }
 }
