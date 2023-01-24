@@ -65,7 +65,12 @@ module "Keyvault"{
   resource_group_name = module.ResourceGroup.rg_name_out
   location = "West US"
 }
-
+module "PublicIP"{
+  source = "./PublicIP"
+  base_name = "TerraformExample01"
+  resource_group_name = module.ResourceGroup.rg_name_out
+  location = "West US"
+}
 module "VM-Linux"{
   source = "./Compute/VM-Linux"
   base_name = "TerraformExample01"
