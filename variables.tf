@@ -16,54 +16,54 @@ variable "location" {
 variable "azurerm_network_security_group" {
     type = string
     description = "The location for the deployment"
-    default     = "East US"
+    default     = "Demo-NSG"
 }
 variable "azurerm_virtual_network" {
     type = string
     description = "The location for the deployment"
-    default     = "East US"
+    default     = "Demo-Vnet"
 }
 
 variable "azurerm_application_insights" {
     type = string
     description = "The location for the deployment"
-    default     = "East US"
+    default     = "Demo-app-insight"
 }
 variable "azurerm_storage_account" {
     type = string
     description = "The location for the deployment"
-    default     = "East US"
+    default     = "Demo-Storage-acc"
 }
 variable "azurerm_network_interface" {
     type = string
     description = "The location for the deployment"
-    default     = "East US"
+    default     = "Demo-nic"
 }
 variable "azurerm_subnet" {
     type = string
     description = "The location for the deployment"
-    default     = "East US"
+    default     = "Demo-subnet"
 }
 
 variable "azurerm_key_vault" {
     type = string
     description = "The location for the deployment"
-    default     = "East US"
+    default     = "Demo-keyvault"
 }
 variable "azurerm_key_vault_secret" {
     type = string
     description = "The location for the deployment"
-    default     = "East US"
+    default     = "Demo-secret"
 }
 variable "azurerm_public_ip" {
     type = string
     description = "The location for the deployment"
-    default     = "East US"
+    default     = "Demo-public-ip"
 }
 variable "azurerm_linux_virtual_machine" {
     type = string
     description = "The location for the deployment"
-    default     = "East US"
+    default     = "Demo-VM-Linux"
 }
 
 
