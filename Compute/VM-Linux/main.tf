@@ -13,7 +13,7 @@ data "azurerm_network_interface" "example" {
   resource_group_name = var.resource_group_name
 }
 data "azurerm_public_ip" "example" {
-  name                = var.public_ip_name
+  name                = var.public_ip_name_out
   resource_group_name = var.resource_group_name
 }
 resource "azurerm_linux_virtual_machine" "example" {
