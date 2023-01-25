@@ -5,6 +5,6 @@ resource "azurerm_key_vault_secret" "example" {
 }
 
 data "azurerm_key_vault" "example" {
-  name                = "examplekeyvault24"
+  name                = data.azurerm_key_vault.keyvault_name_out
   resource_group_name = var.resource_group_name
 }
