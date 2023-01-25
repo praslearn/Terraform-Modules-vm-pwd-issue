@@ -36,4 +36,10 @@ variable "admin_username" {
     default     = "East US"
 }
 
+variable "key_vault_id" {
+    type = string
+    description = "The location for the deployment"
+    default     = "East US"
+}
+
 
