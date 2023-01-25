@@ -1,5 +1,5 @@
 data "azurerm_key_vault" "example" {
-  name                = azurerm_key_vault.example.name
+  name                = var.keyvault_name
   resource_group_name = var.resource_group_name
 }
 #Create KeyVault VM password
