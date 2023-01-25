@@ -16,7 +16,10 @@ data "azurerm_public_ip" "example" {
   name                = "acceptanceTestPublicIp1"
   resource_group_name = var.resource_group_name
 }
-
+data "azurerm_key_vault" "example" {
+  name                = ""
+  resource_group_name = var.resource_group_name
+}
 data "azurerm_key_vault_secret" "example" {
   name         = "vmpassword"
   key_vault_id = data.azurerm_key_vault.example.id
