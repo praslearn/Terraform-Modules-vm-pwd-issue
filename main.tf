@@ -66,14 +66,7 @@ module "Keyvault"{
   location = "West US"
   depends_on =[module.ResourceGroup]
 }
-module "Keyvault-Secret"{
-  source = "./Keyvault-Secret"
-  base_name = "TerraformExample01"
-  resource_group_name = module.ResourceGroup.rg_name_out
-  keyvault_name = module.Keyvault.keyvault_name_out
-  location = "West US"
-  depends_on =[module.ResourceGroup]
-}
+
 
 module "PublicIP"{
   source = "./PublicIP"
@@ -103,7 +96,14 @@ module "Windows"{
   resource_group_name = module.ResourceGroup.rg_name_out
   location = "West US"
 }
-
+module "Keyvault-Secret"{
+  source = "./Keyvault-Secret"
+  base_name = "TerraformExample01"
+  resource_group_name = module.ResourceGroup.rg_name_out
+  keyvault_name = module.Keyvault.keyvault_name_out
+  location = "West US"
+  depends_on =[module.ResourceGroup]
+}
 module "MySQL-Server"{
   source = "./Databases/MySQL-Server"
   base_name = "TerraformExample01"
