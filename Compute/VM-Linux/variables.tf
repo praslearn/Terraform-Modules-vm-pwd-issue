@@ -41,5 +41,8 @@ variable "key_vault_id" {
     description = "The location for the deployment"
     default     = "East US"
 }
-
-
+variable "azurerm_key_vault_secret" {
+    type = string
+    description = "The location for the deployment"
+    default     = "East US"
+}
