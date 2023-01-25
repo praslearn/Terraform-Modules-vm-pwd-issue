@@ -71,7 +71,7 @@ module "Keyvault-Secret"{
   base_name = "TerraformExample01"
   resource_group_name = module.ResourceGroup.rg_name_out
   location = "West US"
-  depends_on =[module.ResourceGroup,module.KeyVault]
+  depends_on =[module.ResourceGroup,module.Keyvault]
 }
 
 module "PublicIP"{
