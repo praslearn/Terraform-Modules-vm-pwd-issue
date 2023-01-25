@@ -22,8 +22,10 @@ resource "azurerm_linux_virtual_machine" "example" {
   resource_group_name         = var.resource_group_name
   size                = "Standard_F2"
   disable_password_authentication = false
-  admin_username      = "adminuser"
-  admin_password      = "P@$$w0rd1234!"
+  admin_username      = var.adminusername
+  admin_password      = data.azurerm_key_vault_secret.vmpassword.value
+ # admin_username      = "adminuser"
+ # admin_password      = "P@$$w0rd1234!"
   network_interface_ids = [
     data.azurerm_network_interface.example.id,
   ]
