@@ -1,3 +1,7 @@
+data "azurerm_key_vault" "example" {
+  name                = data.azurerm_key_vault.example.keyvault_name_out
+  resource_group_name = var.resource_group_name
+}
 #Create KeyVault VM password
 resource "random_password" "vmpassword" {
   length = 20
