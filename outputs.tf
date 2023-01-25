@@ -10,3 +10,6 @@ output "VnetName" {
   value = module.VirtualNetwork.vnet_name_out
 }
 
+output "KeyvaultName" {
+  value = module.Keyvault.keyvault_name_out
+}

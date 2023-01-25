@@ -1,3 +1,3 @@
-output "subnet_id" {
-  value = data.azurerm_subnet.example.id
+output "subnet_name_out" {
+  value = resource.azurerm_subnet.example.name
 }

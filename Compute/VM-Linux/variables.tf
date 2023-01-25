@@ -20,3 +20,19 @@ variable "virtual_network_name" {
     description = "The location for the deployment"
     default     = "East US"
 }
+variable "subnet_name" {
+    type = string
+    description = "The location for the deployment"
+    default     = "East US"
+}
+variable "network_interface_ids" {
+    type = string
+    description = "The location for the deployment"
+    default     = "East US"
+}
+variable "public_ip_name_out" {
+    type = string
+    description = "The location for the deployment"
+    default     = "East US"
+}
+

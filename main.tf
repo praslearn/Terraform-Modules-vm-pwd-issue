@@ -36,10 +36,18 @@ module "VirtualNetwork" {
   source = "./VirtualNetwork"
   base_name = "TerraformExample01"
   resource_group_name = module.ResourceGroup.rg_name_out
+  depends_on = [module.NSG]
   location = "West US"
 }
 module "NetworkInterface"{
   source = "./NetworkInterface"
+  base_name = "TerraformExample01"
+  resource_group_name = module.ResourceGroup.rg_name_out
+  location = "West US"
+  depends_on = [module.VirtualNetwork, module.Subnet]
+}
+module "ApplicationInsights"{
+  source = "./ApplicationInsights"
   base_name = "TerraformExample01"
   resource_group_name = module.ResourceGroup.rg_name_out
   location = "West US"
@@ -48,8 +56,38 @@ module "Subnet"{
   source = "./Subnet"
   base_name = "TerraformExample01"
   resource_group_name = module.ResourceGroup.rg_name_out
+  virtual_network_name = module.VirtualNetwork.vnet_name_out
   location = "West US"
 }
+module "Keyvault"{
+  source = "./Keyvault"
+  base_name = "TerraformExample01"
+  resource_group_name = module.ResourceGroup.rg_name_out
+  location = "West US"
+  depends_on =[module.ResourceGroup]
+}
+module "Keyvault-secret"{
+  source = "./Keyvault-secret"
+  depends_on =[module.Keyvault]
+
+}
+module "PublicIP"{
+  source = "./PublicIP"
+  base_name = "TerraformExample01"
+  resource_group_name = module.ResourceGroup.rg_name_out
+  location = "West US"
+}
+module "VM-Linux"{
+  source = "./Compute/VM-Linux"
+  base_name = "TerraformExample01"
+  resource_group_name = module.ResourceGroup.rg_name_out
+  virtual_network_name = module.VirtualNetwork.vnet_name_out
+  subnet_name   = module.Subnet.subnet_name_out
+  location = "West US"
+    depends_on = [module.VirtualNetwork, module.Subnet,module.NetworkInterface,module.PublicIP,module.Keyvault]
+}
+
+/*
 module "Windows"{
   source = "./Compute/VirtualMachine/Windows"
   base_name = "TerraformExample01"
@@ -63,10 +101,4 @@ module "MySQL-Server"{
   resource_group_name = module.ResourceGroup.rg_name_out
   location = "West US"
 }
-module "ApplicationInsights"{
-  source = "./ApplicationInsights"
-  base_name = "TerraformExample01"
-  resource_group_name = module.ResourceGroup.rg_name_out
-  location = "West US"
-}
-
+*/
