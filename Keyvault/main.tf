@@ -9,7 +9,7 @@ resource "random_id" "kvname" {
 data "azurerm_client_config" "current" {}
 
 resource "azurerm_key_vault" "example" {
-  name                        = random_id.kvname.hex
+  name                        = "example-keyvault24"             #random_id.kvname.hex
   location                    = var.location
   resource_group_name        =  var.resource_group_name
   enabled_for_disk_encryption = true
