@@ -4,7 +4,6 @@ data "azurerm_key_vault" "example" {
 }
 resource "random_password" "vmpassword" {
   length = 20
-  special = true
   min_upper = 3
   min_lower = 3
   min_numeric = 3
