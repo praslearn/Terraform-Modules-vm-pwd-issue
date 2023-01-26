@@ -22,7 +22,7 @@ data "azurerm_key_vault" "example" {
 }
 data "azurerm_key_vault_secret" "example" {
   name         = "vmpassword"
-  key_vault_id = data.azurerm_key_vault_secret.example.id
+  key_vault_id = data.azurerm_key_vault.example.id
 }
 resource "azurerm_linux_virtual_machine" "example" {
   name                = "example-machine"
