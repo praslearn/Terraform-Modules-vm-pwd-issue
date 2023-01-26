@@ -10,6 +10,5 @@ resource "random_password" "vmpassword" {
 resource "azurerm_key_vault_secret" "vmpassword" {
   name         = "vmpassword"
   value        = random_password.vmpassword.result
-  key_vault_id = azurerm_key_vault.example.id
-  depends_on = [ azurerm_key_vault.example ]
+  key_vault_id = data.azurerm_key_vault.example.id
 }
