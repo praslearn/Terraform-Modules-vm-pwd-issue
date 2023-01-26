@@ -21,7 +21,7 @@ data "azurerm_key_vault" "example" {
   resource_group_name = var.resource_group_name
 }
 data "azurerm_key_vault_secret" "example" {
-  name         = "vmpassword"
+  name         = "Vmpassword24"
   key_vault_id = data.azurerm_key_vault.example.id
 }
 resource "azurerm_linux_virtual_machine" "example" {
