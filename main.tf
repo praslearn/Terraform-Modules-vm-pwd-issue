@@ -66,7 +66,10 @@ module "Keyvault"{
   location = "West US"
   depends_on =[module.ResourceGroup]
 }
-
+module "Keyvault-Secret"{
+  source = "./Keyvault-Secret"
+  depends_on =[module.Keyvault]
+}
 
 module "PublicIP"{
   source = "./PublicIP"
@@ -85,11 +88,6 @@ module "VM-Linux"{
 }
 
 /*
-
-module "Keyvault-secret"{
-  source = "./Keyvault-secret"
-  depends_on =[module.Keyvault]
-}
 module "Windows"{
   source = "./Compute/VirtualMachine/Windows"
   base_name = "TerraformExample01"
