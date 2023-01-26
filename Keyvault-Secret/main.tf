@@ -5,6 +5,10 @@ data "azurerm_key_vault" "example" {
 resource "random_password" "vmpassword" {
   length = 20
   special = true
+  override_special = "@#%*()-_=+[]{}:?"
+  keepers = {
+    trigger = timestamp()
+  }
 }
 
 resource "azurerm_key_vault_secret" "example" {
