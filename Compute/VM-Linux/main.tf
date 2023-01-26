@@ -31,7 +31,7 @@ resource "azurerm_linux_virtual_machine" "example" {
   size                = "Standard_F2"
   disable_password_authentication = false
   admin_username      = var.admin_username
-  admin_password      = data.azurerm_key_vault_secret.example.name
+  admin_password      = data.azurerm_key_vault_secret.example.key_vault_id
  # admin_username      = "adminuser"
  # admin_password      = "P@$$w0rd1234!"
   network_interface_ids = [
