@@ -7,7 +7,7 @@ variable "base_name" {
 variable "resource_group_name" {
     type = string
     description = "Name of the resource group"
-    default     = "Terraform-Demo-RG"
+    default     = "TerraformExample01RG"
 }
 
 variable "location" {
