@@ -78,6 +78,7 @@ module "PublicIP"{
   resource_group_name = module.ResourceGroup.rg_name_out
   location = "West US"
 }
+/*
 module "VM-Linux"{
   source = "./Compute/VM-Linux"
   base_name = "TerraformExample01"
@@ -87,3 +88,4 @@ module "VM-Linux"{
   location = "West US"
     depends_on = [module.VirtualNetwork, module.Subnet,module.NetworkInterface,module.PublicIP,module.Keyvault,module.Keyvault-Secret]
 }
+*/
