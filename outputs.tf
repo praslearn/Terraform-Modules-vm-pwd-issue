@@ -13,3 +13,6 @@ output "VnetName" {
 output "KeyvaultName" {
   value = module.Keyvault.keyvault_name_out
 }
+output "KvsecretName" {
+  value = module.Keyvault.kv_secret_name_out
+}
