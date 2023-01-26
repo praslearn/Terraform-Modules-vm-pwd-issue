@@ -1,8 +1,10 @@
+/*
 #Create KeyVault ID
 resource "random_id" "kvname" {
   byte_length = 5
   prefix = "keyvault"
 }
+*/
 #Keyvault Creation
 data "azurerm_client_config" "current" {}
 
