@@ -68,6 +68,7 @@ module "Keyvault"{
 }
 module "Keyvault-Secret"{
   source = "./Keyvault-Secret"
+  resource_group_name = module.ResourceGroup.rg_name_out
   depends_on =[module.ResourceGroup ,module.Keyvault]
 }
 
