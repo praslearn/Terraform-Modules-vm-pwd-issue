@@ -12,6 +12,6 @@ resource "random_password" "vmpassword" {
 
 resource "azurerm_key_vault_secret" "example" {
   name         = "vmpassword"
-  value        = "${random_password.vmpassword.result}Az24"
+  value        = random_password.vmpassword.result
   key_vault_id = data.azurerm_key_vault.example.id
 }
