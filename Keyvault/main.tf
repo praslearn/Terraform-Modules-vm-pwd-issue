@@ -16,7 +16,7 @@ resource "azurerm_key_vault" "example" {
     object_id = data.azurerm_client_config.current.object_id
 
     key_permissions = [
-      "Get" , "Create", "Update" , "Verify"
+      "Get" , "Create", "Update" , "Verify","List"
     ]
 
     secret_permissions = [
@@ -24,7 +24,7 @@ resource "azurerm_key_vault" "example" {
     ]
 
     storage_permissions = [
-      "Get",
+      "Get","List"
     ]
   }
 }
