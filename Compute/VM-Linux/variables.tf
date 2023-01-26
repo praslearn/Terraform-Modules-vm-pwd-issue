@@ -41,9 +41,5 @@ variable "key_vault_id" {
     description = "The location for the deployment"
     default     = "East US"
 }
-variable "value" {
-    type = string
-    description = "The location for the deployment"
-    default     = "East US"
-}
+
 
