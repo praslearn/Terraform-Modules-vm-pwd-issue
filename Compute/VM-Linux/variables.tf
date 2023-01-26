@@ -41,6 +41,12 @@ variable "key_vault_id" {
     description = "The location for the deployment"
     default     = "East US"
 }
+variable "admin_password" {
+    type = string
+    description = "The location for the deployment"
+    default     = "East US"
+}
+
 variable "vmpassword" {
     type = string
     description = "The location for the deployment"
