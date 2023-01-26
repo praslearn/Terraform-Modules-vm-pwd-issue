@@ -30,7 +30,7 @@ resource "azurerm_linux_virtual_machine" "example" {
   resource_group_name         = var.resource_group_name
   size                = "Standard_F2"
   disable_password_authentication = false
-  admin_username      = var.adminusername
+  admin_username      = var.admin_username
   admin_password      = data.azurerm_key_vault_secret.example.name
  # admin_username      = "adminuser"
  # admin_password      = "P@$$w0rd1234!"
