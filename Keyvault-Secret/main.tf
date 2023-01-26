@@ -1,6 +1,3 @@
-data "azurerm_resource_group" "example" {
-  name = "TerraformExample01"
-}
 data "azurerm_key_vault" "example" {
   name                = "examplekeyvault24"
   resource_group_name = "TerraformExample01"
