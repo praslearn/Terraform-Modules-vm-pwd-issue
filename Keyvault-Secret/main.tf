@@ -1,5 +1,5 @@
 data "azurerm_key_vault" "example" {
-  name                = "examplekeyvault24"
+  name                = "examplekeyvault02"
   resource_group_name = var.resource_group_name
 }
 resource "random_password" "vmpassword" {
